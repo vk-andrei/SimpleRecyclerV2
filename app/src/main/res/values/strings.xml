@@ -12,5 +12,8 @@
     <string name="sveta">Svetlana</string>
 
     <string name="btn_next_image">Next image</string>
+    <string name="search">Search</string>
+    <string name="remove_all">Remove all</string>
+    <string name="exit">Exit</string>
 
 </resources>
