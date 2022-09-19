@@ -12,9 +12,9 @@ import com.example.simplerecyclerv2.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private var personAdapter: PersonAdapter = PersonAdapter()
-    private lateinit var personNames: Array<String>
-    private lateinit var personImgIds: IntArray
-    private var currentPerson : Person? = null
+    //private lateinit var personNames: Array<String>
+    //private lateinit var personImgIds: IntArray
+    //private var currentPerson : Person? = null
 
     private var editModeLauncher: ActivityResultLauncher<Intent>? = null
 
@@ -30,15 +30,14 @@ class MainActivity : AppCompatActivity() {
         editModeLauncher =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
                 if (it.resultCode == RESULT_OK && it.data != null) {
-                    val currentPerson = it.data!!.getSerializableExtra("person")
+                    val currentPerson = it.data!!.getParcelableExtra<Person>("person")
                     Log.d("TAG", "CurPersonIMG: $currentPerson")
                     personAdapter.addPerson(currentPerson as Person)
                 }
             }
     }
 
-
- /*   private fun initData() {
+    /*   private fun initData() {
         personNames = resources.getStringArray(R.array.personsNames)
         personImgIds = intArrayOf(
             R.drawable.man_01, R.drawable.man_02, R.drawable.man_03, R.drawable.man_04,

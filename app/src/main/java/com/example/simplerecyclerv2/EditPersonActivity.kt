@@ -19,8 +19,15 @@ class EditPersonActivity : AppCompatActivity() {
         binding = ActivityEditPersonBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.ivEditMode.setImageResource(listImages[indexImage])
+        initView()
+        setListeners()
+    }
 
+    private fun initView() {
+        binding.ivEditMode.setImageResource(listImages[indexImage])
+    }
+
+    private fun setListeners() {
         binding.btnNextImage.setOnClickListener {
             indexImage++
             if (indexImage > 7) indexImage = 0
