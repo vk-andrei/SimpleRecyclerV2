@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
                     val currentPerson = it.data!!.getParcelableExtra<Person>("person")
                     Log.d("TAG", "CurPersonIMG: $currentPerson")
                     personAdapter.addPerson(currentPerson as Person)
+                    binding.rvFaces.scrollToPosition(personAdapter.itemCount - 1)
                 }
             }
 

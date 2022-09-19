@@ -32,7 +32,7 @@ class EditPersonActivity : AppCompatActivity() {
     private fun setListeners() {
         binding.btnNextImage.setOnClickListener {
             indexImage++
-            if (indexImage > 7) indexImage = 0
+            if (indexImage >= listImages.size) indexImage = 0
             imageIdRes = listImages[indexImage]
             binding.ivEditMode.setImageResource(imageIdRes)
         }
