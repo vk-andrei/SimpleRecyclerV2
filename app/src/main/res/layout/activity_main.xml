@@ -19,14 +19,29 @@
         tools:listitem="@layout/rv_persons_one_item"
     -->
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_addItem"
-        android:layout_width="0dp"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu_bottom_navigation"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/add_person"
+        android:background="@color/grey"
+        app:itemIconTint="@drawable/bottom_nav_selector"
+        app:itemTextColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:menu="@menu/menu_bottom" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:outlineSpotShadowColor="@color/purple_200"
+        android:outlineAmbientShadowColor="@color/purple_500"
+        app:rippleColor="@color/grey"
+        android:backgroundTint="@color/orange"
+
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toTopOf="@+id/menu_bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

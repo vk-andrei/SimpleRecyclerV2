@@ -1,13 +1,13 @@
 package com.example.simplerecyclerv2
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.simplerecyclerv2.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
                     personAdapter.addPerson(currentPerson as Person)
                 }
             }
+
     }
 
     /*   private fun initData() {
@@ -61,7 +62,9 @@ class MainActivity : AppCompatActivity() {
             R.id.app_bar_remove_all -> {
                 Snackbar.make(binding.root, "REMOVE ALL", Snackbar.LENGTH_SHORT).show()
             }
-            R.id.app_bar_exit -> {finish()}
+            R.id.app_bar_exit -> {
+                finish()
+            }
         }
         return true
     }
@@ -73,7 +76,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setListeners() {
         //var index = 0
-        binding.btnAddItem.setOnClickListener {
+        binding.btnFab.setOnClickListener {
             val i = Intent(this@MainActivity, EditPersonActivity::class.java)
             editModeLauncher?.launch(i)
 
@@ -81,6 +84,17 @@ class MainActivity : AppCompatActivity() {
                 binding.rvFaces.scrollToPosition(personAdapter.itemCount - 1)
                 index++
                 if (index > 7) index = 0*/
+        }
+
+        binding.menuBottomNavigation.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.menu_bottom_home -> {}
+                R.id.menu_bottom_search -> {}
+                R.id.menu_bottom_exit -> {
+                    finish()
+                }
+            }
+            true
         }
     }
 
