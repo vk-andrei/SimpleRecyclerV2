@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SimpleRecycler</string>
+    <string name="add_person">Add person</string>
+
+    <string name="mark">Mark</string>
+    <string name="artemii">Artemii</string>
+    <string name="andrei">Andrei</string>
+    <string name="ded">Ded</string>
+    <string name="sofia">Sofia</string>
+    <string name="helen">Helen</string>
+    <string name="lidia">Lidiya</string>
+    <string name="sveta">Svetlana</string>
+
+    <string name="btn_next_image">Next image</string>
+
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="personsNames">
+        <item>@string/mark</item>
+        <item>@string/artemii</item>
+        <item>@string/andrei</item>
+        <item>@string/ded</item>
+        <item>@string/sofia</item>
+        <item>@string/helen</item>
+        <item>@string/lidia</item>
+        <item>@string/sveta</item>
+    </string-array>
+</resources>

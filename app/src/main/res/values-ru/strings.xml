@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Добавлялка-крутилка</string>
+    <string name="add_person">Добавить человека</string>
+
+    <string name="mark">Марк</string>
+    <string name="artemii">Артемий</string>
+    <string name="andrei">Андрей</string>
+    <string name="ded">Дед</string>
+    <string name="sofia">Соня</string>
+    <string name="helen">Лена</string>
+    <string name="lidia">Лида</string>
+    <string name="sveta">Света</string>
+
+    <string name="btn_next_image">Следующая картинка</string>
+
+
+</resources>
